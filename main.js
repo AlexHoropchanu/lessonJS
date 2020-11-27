@@ -46,23 +46,23 @@ console.log(post.comments[1].text);
 
 //Задание 3
 
-// const products = [
-//   {
-//     id: 3,
-//     price: 200,
-//   },
-//   {
-//     id: 4,
-//     price: 900,
-//   },
-//   {
-//     id: 1,
-//     price: 1000,
-//   },
-// ];
-// products.forEach(function (product) {
-//   console.log(product.price - (15 * product.price) / 100);
-// });
+const productss = [
+  {
+    id: 3,
+    price: 200,
+  },
+  {
+    id: 4,
+    price: 900,
+  },
+  {
+    id: 1,
+    price: 1000,
+  },
+];
+productss.forEach(function (product) {
+  console.log(product.price - (15 * product.price) / 100);
+});
 
 //Задание 4
 
@@ -81,9 +81,36 @@ const products = [
     id: 10,
     price: 26,
     photos: ["3.jpg"],
-  },
+  },  
   {
     id: 8,
     price: 78,
   },
 ];
+const photo = products.filter(function(product, id){
+  if(product.photos != 0&&product.photos != undefined){
+    console.log(product.photos),
+    id++;
+  }
+})
+const cost = products.sort(function compare(a,b){
+  if(a.price>b.price){
+    return 1;
+  }
+  else if(a.price < b.price){
+    return -1;
+  }
+  else{
+    return 0;
+  }
+})
+console.log(cost)
+
+//Задание 5
+
+let a = "*"
+console.log(a);
+for (let i=0; i<19;i++){
+  a += "*";
+  console.log(a);
+}
