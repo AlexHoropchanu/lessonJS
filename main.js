@@ -28,9 +28,15 @@ popUpBtn.addEventListener('click', ()=>{
     }
 
 })
+let arr = [];
 buyBtn.forEach((e, index)=>{
     e.addEventListener('click', (elem)=>{
+      arr.push(goods[index])
+      popUp.innerHTML = " ";
+      arr.forEach((e)=>{
+        popUp.insertAdjacentHTML('afterbegin', `<div class="cart-item"><h3>${e.title}</h3><img src="${e.img}"/><p>${e.price}</p><button class="btn">Купить</button></div>`
+        )})
         const a = document.querySelectorAll('.goods-item')
-            popUp.innerHTML = a[index + 1].outerHTML
+            
     })
 })
